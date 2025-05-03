@@ -1,0 +1,645 @@
+/* Основні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: comfortaa;
+}
+
+/* Фонова картинка */
+body {
+  background: url('/assets/images/background.png') no-repeat center center/cover;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  background: rgba(120, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Логотип */
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header__logo h4 {
+  font-size: 22px;
+}
+
+/* Навігація */
+.header__menu {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.header__menu a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #fdf0d5;
+}
+
+/* Навігація */
+.header__menu-right {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu-right li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-right a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Іконки */
+.header__menu-right img {
+  height: 32px;
+  cursor: pointer;
+}
+
+.search:hover{
+  content: url("/assets/icons/search1.png");
+}
+.profile:hover{
+  content: url("/assets/icons/profile1.png");
+}
+.menu:hover{
+  content: url("/assets/icons/menu1.png");
+}
+
+
+/* Головна секція */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+  margin: 120px auto 80px auto;
+  padding: 20px;
+  max-width: 1400px;
+  width: 90%;
+  border-radius: 30px;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(30, 30, 30, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 8px 18px -6px rgba(24, 39, 75, 0.12);
+  backdrop-filter: blur(20px);
+}
+
+.logo {
+  width: 240px;
+  height: auto;
+  max-height: 360px;
+  margin: 0 auto 20px auto;
+}
+
+.main h1 {
+  font-size: 48px;
+}
+
+.main ul {
+  text-align: left;
+  display: inline-block;
+}
+
+.main li {
+  margin: 5px 0;
+}
+
+.main button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #780000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.main a{
+  text-decoration: none;
+}
+
+.main button:hover {
+  background: #c1121f;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+}
+
+.cinema-logo {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-info {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.features-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.features-list {
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.btn-schedule {
+  display: inline-block;
+  background-color: #8b0000;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.btn-schedule:hover {
+  background-color: #a00000;
+}
+
+.f25th{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.features-list-ab {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero-description-ab{
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-info a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.film-section{
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.filter-container {
+  width: 100%;
+  padding: 20px;
+  text-align: start;
+}
+
+.filter-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Сітка фільмів */
+.movies-grid {
+  display: grid;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.movie-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Рядок фільмів */
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  margin-top: 40px;
+  width: 100%;
+  gap: 20px;
+}
+
+.movie-row .movie-card {
+  flex: 0 0 auto;
+  width: 180px;
+}
+
+/* FOOTER */
+footer {
+  background: #1e1e1e;
+  color: #424242;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer__right {
+  text-align: right;
+}
+
+.footer__right p {
+  margin-bottom: 10px;
+}
+
+.footer__links {
+  display: flex;
+  list-style: none;
+}
+
+.footer__links li {
+  margin: 0 10px;
+}
+
+.footer__links img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.inst:hover{
+  content: url("/assets/icons/instagram1.png");
+}
+
+.tg:hover{
+  content: url("/assets/icons/telegram1.png");
+}
+
+.tt:hover{
+  content: url("/assets/icons/tiktok1.png");
+}
+
+.fb:hover{
+  content: url("/assets/icons/facebook1.png");
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Для середніх пристроїв ≥992px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hero-content {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .cinema-logo {
+    flex: 0 0 200px;
+  }
+  
+  .main h1 {
+    font-size: 42px;
+  }
+  
+  .main p {
+    font-size: 18px;
+  }
+  
+  .header__menu li {
+    margin: 0 10px;
+  }
+  
+  .header__menu a {
+    font-size: 16px;
+  }
+}
+
+/* Для великих пристроїв ≥1200px */
+@media (min-width: 1200px) {
+  .movies-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .hero-content {
+    gap: 50px;
+  }
+  
+  .cinema-logo {
+    flex: 0 0 250px;
+  }
+  
+  main {
+    padding: 20px 70px;
+  }
+}
+
+/* Стилі для сторінки деталей фільму */
+.movie-details {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  width: 100%;
+}
+
+.movie-poster-large {
+  flex: 0 0 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-poster-large img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.movie-meta {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.movie-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.movie-cast {
+  margin-bottom: 30px;
+}
+
+.movie-cast h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cast-member {
+  flex: 0 0 calc(20% - 20px);
+  text-align: center;
+}
+
+.cast-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.book-tickets {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-tickets:hover {
+  background-color: #a00000;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .movie-details {
+    gap: 30px;
+  }
+  
+  .movie-poster-large {
+    flex: 0 0 250px;
+  }
+  
+  .cast-member {
+    flex: 0 0 calc(25% - 20px);
+  }
+}
+
+/* Стилі для сторінки розкладу */
+.schedule-container {
+  width: 100%;
+  padding: 30px;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+.day-btn {
+  padding: 12px 20px;
+  background-color: rgba(120, 0, 0, 0.5);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.day-btn.active {
+  background-color: #8b0000;
+}
+
+.day-btn:hover {
+  background-color: rgba(120, 0, 0, 0.8);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.schedule-item {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.schedule-item:hover {
+  transform: translateY(-5px);
+}
+
+.schedule-content {
+  padding: 20px;
+}
+
+.schedule-movie {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.schedule-poster {
+  width: 80px;
+  height: 120px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.schedule-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.schedule-movie-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.schedule-meta {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.showtime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.showtime-btn {
+  padding: 8px 12px;
+  background-color: rgba(120, 0, 0, 0.5);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.showtime-btn:hover {
+  background-color: #8b0000;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .schedule-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

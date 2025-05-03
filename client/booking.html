@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Бронювання квитків на фільм Аватар у кінотеатрі 25 Frame. Виберіть зручні місця та час сеансу онлайн.">
+    <link rel="icon" type="image/png" href="/assets/icons/logo_small.png">
+    <link rel="stylesheet" href="/css/booking.css">
+    <title>Бронювання квитків | 25 Frame</title>
+</head>
+<body>
+  <header>
+    <nav class="header__nav">
+      <div class="header__logo">
+        <img src="/assets/icons/logo_small.png" alt="лого">
+        <h4>25 frame</h4>
+        <div class="header__logo-overlay"></div>
+      </div>
+      
+      <ul class="header__menu">
+        <li><a href="/client/index.html">Головна</a></li>
+        <li><a href="/client/schedule.html">Розклад</a></li>
+        <li><a href="/client/films.html">Фільми</a></li>
+        <li><a href="/client/contacts.html">Контакти</a></li>
+        <li><a href="/client/about.html">Про нас</a></li>
+      </ul>
+      <ul class="header__menu-right">
+        <li><img class="search" src="/assets/icons/search.png" alt="search"></li>
+        <li><img class="profile" src="/assets/icons/profile.png" alt="profile"></li>
+        <li><img class="menu" src="/assets/icons/menu.png" alt="menu"></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="container movie-container">
+      <!-- Ліва колонка: постер та деталі фільму -->
+      <div class="booking-left-column">
+          <div class="movie-poster">
+              <img src="/assets/images/avatar.png" alt="Аватар" class="poster-img">
+          </div>
+          <div class="movie-details-basic">
+              <h1 class="movie-title">Аватар</h1>
+              <div class="session-info">
+                  <div class="info-item">
+                      <img src="/assets/icons/location.png" alt="Локація">
+                      <span class="info-text">Зал № 4</span>
+                  </div>
+                  <div class="info-item">
+                      <img src="/assets/icons/calendar.png" alt="Дата">
+                      <span class="info-text">Середа<br>12.03.2025</span>
+                  </div>
+                  <div class="info-item">
+                      <img src="/assets/icons/clock.png" alt="Час">
+                      <span class="info-text">17:10 - 19:15</span>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+      <!-- Центральна колонка: схема залу -->
+      <div class="booking-center-column">
+          <div class="seats-section">
+              <div class="screen-shape">
+                  <div class="screen-text">Екран</div>
+              </div>
+              <div class="seats-map">
+                  <!-- Сюди будуть додані місця через JavaScript -->
+              </div>
+              <div class="seat-legend">
+                  <div class="legend-item">
+                      <div class="seat seat-demo seat-free"></div>
+                      <span>Вільне</span>
+                  </div>
+                  <div class="legend-item">
+                      <div class="seat seat-demo seat-reserved"></div>
+                      <span>Заброньоване</span>
+                  </div>
+                  <div class="legend-item">
+                      <div class="seat seat-demo seat-selected"></div>
+                      <span>Вибране</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Права колонка: підсумок та кнопка -->
+      <div class="booking-right-column">
+        <div class="duration-info">
+          <img src="/assets/icons/timer.png" alt="Тривалість">
+          <span class="duration-text"></span>
+        </div>
+          <div class="ticket-prices">
+              <h2 class="ticket-title">Квитки</h2>
+              <div class="price-list">
+                  <!-- Підсумок буде згенеровано через JavaScript -->
+              </div>
+              <button class="btn-continue">Продовжити</button>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__left">
+      <div class="footer__logo">
+        <img src="/assets/icons/logo_small_f.png" alt="лого">
+        <h4>25 frame</h4>
+      </div>
+    </div>
+    <div class="footer__right">
+      <p>Наші соц мережі</p>
+      <ul class="footer__links">
+        <li><img class="inst" src="/assets/icons/instagram.png" alt="instagram"></li>
+        <li><img class="tg" src="/assets/icons/telegram.png" alt="telegram"></li>
+        <li><img class="tt" src="/assets/icons/tiktok.png" alt="tiktok"></li>
+        <li><img class="fb" src="/assets/icons/facebook.png" alt="facebook"></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

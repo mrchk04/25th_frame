@@ -1,0 +1,429 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: comfortaa;
+}
+
+/* Фонова картинка */
+body {
+  background: url('/assets/images/background.png') no-repeat center center/cover;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  background: rgba(120, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Логотип */
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header__logo h4 {
+  font-size: 22px;
+}
+
+/* Навігація */
+.header__menu {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.header__menu a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #fdf0d5;
+}
+
+/* Навігація */
+.header__menu-right {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu-right li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-right a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Іконки */
+.header__menu-right img {
+  height: 32px;
+  cursor: pointer;
+}
+
+.search:hover {
+  content: url("/assets/icons/search1.png");
+}
+
+.profile:hover {
+  content: url("/assets/icons/profile1.png");
+}
+
+.menu:hover {
+  content: url("/assets/icons/menu1.png");
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+  margin: 120px auto 80px auto;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(30, 30, 30, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 8px 18px -6px rgba(24, 39, 75, 0.12);
+  backdrop-filter: blur(20px);
+  width: 90%;
+  max-width: 1600px;
+}
+
+/* Schedule Styles */
+.main {
+  padding: 30px 0;
+  width: 100%;
+}
+
+.schedule-container {
+  padding: 20px;
+  width: 100%;
+}
+
+/* Schedule Header with Dates */
+.schedule-header {
+  display: grid;
+  grid-template-columns: 130px repeat(7, 1fr);
+  margin-bottom: 10px;
+  width: 100%;
+  min-width: max-content;
+}
+
+.date-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.date-header:hover {
+  color: #ffeb99;
+}
+
+.date-number {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.date-day {
+  font-size: 16px;
+}
+
+.empty-header {
+  border-bottom: 2px solid transparent;
+}
+
+/* Schedule Table */
+.schedule-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: max-content;
+}
+
+.movie-row {
+  display: grid;
+  grid-template-columns: 130px repeat(7, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-row:last-child {
+  border-bottom: none;
+}
+
+.movie-info {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.showtime-cell {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 120px;
+}
+
+.showtime-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+.showtime-link:hover {
+  background-color: #8b0000;
+  color: #fff;
+}
+
+/* Schedule Navigation - if needed for week selection */
+.schedule-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.nav-arrow {
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-arrow:hover {
+  color: #ffeb99;
+}
+
+.week-indicator {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #1e1e1e;
+  color: #424242;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer__right {
+  text-align: right;
+}
+
+.footer__right p {
+  margin-bottom: 10px;
+}
+
+.footer__links {
+  display: flex;
+  list-style: none;
+}
+
+.footer__links li {
+  margin: 0 10px;
+}
+
+.footer__links img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.inst:hover {
+  content: url("/assets/icons/instagram1.png");
+}
+
+.tg:hover {
+  content: url("/assets/icons/telegram1.png");
+}
+
+.tt:hover {
+  content: url("/assets/icons/tiktok1.png");
+}
+
+.fb:hover {
+  content: url("/assets/icons/facebook1.png");
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Для середніх пристроїв ≥992px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+      padding: 20px 30px;
+  }
+  
+  .schedule-header,
+  .movie-row {
+      grid-template-columns: 110px repeat(7, 1fr);
+  }
+
+ 
+  .date-number {
+      font-size: 16px;
+  }
+  
+  .date-day {
+      font-size: 14px;
+  }
+  
+  .showtime-cell {
+      min-width: 100px;
+      padding: 15px 5px;
+  }
+  
+  .movie-poster {
+      max-width: 150px;
+  }
+}
+
+/* Для великих пристроїв ≥1200px */
+@media (min-width: 1200px) {
+  main {
+      padding: 20px 50px;
+  }
+  
+  .schedule-header,
+  .movie-row {
+      grid-template-columns: 130px repeat(7, 1fr);
+  }
+  
+  .date-number {
+      font-size: 18px;
+  }
+  
+  .date-day {
+      font-size: 16px;
+  }
+  
+  .showtime-cell {
+      min-width: 120px;
+  }
+  
+  .movie-poster {
+      max-width: 150px;
+  }
+  
+  .container {
+      max-width: 1600px;
+  }
+}
+
+/* Додаткові виправлення для контейнерів */
+@media (min-width: 1400px) {
+  .container, main {
+      max-width: 1800px;
+  }
+  
+  .showtime-cell {
+      min-width: 140px;
+  }
+}
