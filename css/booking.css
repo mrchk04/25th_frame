@@ -8,7 +8,7 @@
 
 /* Фонова картинка */
 body {
-  background: url('/assets/images/background.png') no-repeat center center/cover;
+  background: url('./assets/images/background.png') no-repeat center center/cover;
   color: #ffffff;
   background-color: #1e1e1e;
   min-height: 100vh;
@@ -107,13 +107,13 @@ header {
 }
 
 .search:hover{
-  content: url("/assets/icons/search1.png");
+  content: url("./assets/icons/search1.png");
 }
 .profile:hover{
-  content: url("/assets/icons/profile1.png");
+  content: url("./assets/icons/profile1.png");
 }
 .menu:hover{
-  content: url("/assets/icons/menu1.png");
+  content: url("./assets/icons/menu1.png");
 }
 
 .container {
@@ -430,19 +430,19 @@ footer {
 }
 
 .inst:hover{
-  content: url("/assets/icons/instagram1.png");
+  content: url("./assets/icons/instagram1.png");
 }
 
 .tg:hover{
-  content: url("/assets/icons/telegram1.png");
+  content: url("./assets/icons/telegram1.png");
 }
 
 .tt:hover{
-  content: url("/assets/icons/tiktok1.png");
+  content: url("./assets/icons/tiktok1.png");
 }
 
 .fb:hover{
-  content: url("/assets/icons/facebook1.png");
+  content: url("./assets/icons/facebook1.png");
 }
 
 /* Стилізація номерів рядів */
