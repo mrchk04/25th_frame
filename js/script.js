@@ -8,7 +8,7 @@ function initializeBookingTimer() {
     // Додаємо червону іконку таймера для акцентування уваги
     const durationInfo = document.querySelector('.duration-info');
     durationInfo.innerHTML = `
-        <img src="../assets/icons/timer.png" class="timer-icon">
+        <img src="/25th_frame/assets/icons/timer.png" class="timer-icon">
         <span class="duration-text timer-active">${formatTime(totalSeconds)}</span>
     `;
     
