@@ -9,6 +9,7 @@ function initializeBookingTimer() {
     const durationInfo = document.querySelector('.duration-info');
     durationInfo.innerHTML = `
         <img src="/25th_frame/assets/icons/timer.png" class="timer-icon">
+        
         <span class="duration-text timer-active">${formatTime(totalSeconds)}</span>
     `;
     
