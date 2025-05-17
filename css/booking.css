@@ -550,7 +550,7 @@ footer {
 }
 
 /* Адаптивність */
-@media (max-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .container {
     max-width: 1150px;
   }
@@ -608,70 +608,279 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+/* Base mobile styles - apply to all mobile screens */
+@media (max-width: 991px) {
+  /* General layout adjustments */
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Movie container becomes vertical */
+  .movie-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  /* Adjust all columns to full width */
+  .booking-left-column,
+  .booking-center-column,
+  .booking-right-column {
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Adjust movie poster and details */
   .booking-left-column {
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .movie-poster {
-      width: 200px;
-      margin-bottom: 20px;
+    width: 70%;
+    max-width: 200px;
   }
-  
-  .header__menu {
-      display: none;
+
+  /* Improve touch targets */
+  .seat {
+    width: 36px;
+    height: 36px;
+    margin: 3px;
+    font-size: 14px;
+  }
+
+  /* Enhance button size */
+  .btn-continue {
+    padding: 16px 30px;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  /* Adjust header for mobile */
+  header {
+    padding: 10px;
+  }
+
+  .header__logo img {
+    height: 30px;
+  }
+
+  .header__logo h4 {
+    font-size: 18px;
+  }
+
+  /* Better spacing for legend */
+  .seat-legend {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Make timer more visible */
+  .duration-text {
+    font-size: 26px;
+  }
+
+  /* Modal adjustments for mobile */
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Make notifications more visible */
+  .notification {
+    width: 90%;
+    right: 5%;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
   }
 }
 
-/* Покращення для мобільної навігації */
-@media (max-width: 768px) {
+/* Extra Small: <576px */
+@media (max-width: 575px) {
+  /* Header adjustments - simplified menu */
   .header__menu {
-    display: none;
+    display: none; /* Hide standard menu on extra small screens */
   }
-  
-  .header__menu-right .menu {
-    display: block; 
-  }
-  
-  /* Стилі для мобільного меню */
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background: rgba(120, 0, 0, 0.95);
-    z-index: 1000;
-    transition: right 0.3s ease;
-    padding: 60px 20px 20px;
-  }
-  
-  .mobile-menu.active {
-    right: 0;
-  }
-  
-  .mobile-menu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
-  .mobile-menu ul {
-    list-style: none;
-  }
-  
-  .mobile-menu ul li {
-    margin: 15px 0;
-  }
-  
-  .mobile-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+
+  /* Create a hamburger menu */
+  .header__menu-toggle {
     display: block;
-    padding: 5px 0;
   }
+
+  /* Adjust movies container for extra small */
+  .movie-container {
+    padding: 10px;
+  }
+
+  /* Smaller font sizes but still readable */
+  .movie-title {
+    font-size: 20px;
+  }
+
+  .info-text {
+    font-size: 14px;
+  }
+
+  /* Adjust seat size for better touch */
+  .seat {
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+  }
+
+  /* Reduce spacing */
+  .seats-map {
+    gap: 5px;
+  }
+
+  /* Ensure screen shape is visible */
+  .screen-shape {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+
+  /* Smaller legend items */
+  .legend-item {
+    font-size: 12px;
+  }
+
+  /* Keep buttons large */
+  .btn-continue,
+  .modal-button {
+    padding: 14px 20px;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    width: 95%;
+  }
+
+  /* Footer adjustments */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer__left,
+  .footer__right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer__links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Small: ≥576px and <768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Header menu simplified but not hidden */
+  .header__menu li {
+    margin: 0 8px;
+  }
+
+  .header__menu a {
+    font-size: 16px;
+  }
+
+  /* Adjust seat size */
+  .seat {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Movie details */
+  .movie-title {
+    font-size: 22px;
+  }
+
+  /* Screen adjustment */
+  .screen-shape {
+    width: 90%;
+  }
+
+  /* Footer less compressed */
+  footer {
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 0.95);
+  z-index: 200;
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu__list {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu__item a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+
+  display: block;
+  padding: 10px 0;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 190;
+  display: none;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+}
+
+/* Adjustments for the timer */
+.duration-info {
+  width: 100%;
+}
+
+/* Ensure proper layout in modal dialogs */
+.modal-button {
+  min-width: 120px;
+  min-height: 48px;
 }

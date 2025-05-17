@@ -427,3 +427,323 @@ footer {
       min-width: 140px;
   }
 }
+
+/* Загальні стилі для мобільних пристроїв */
+@media (max-width: 576px) {
+  /* Загальні стилі */
+  * {
+    font-size: 16px;
+  }
+  
+  /* Header для мобільних */
+  header {
+    padding: 10px;
+  }
+  
+  .header__logo h4 {
+    font-size: 18px;
+  }
+  
+  .header__logo img {
+    height: 30px;
+  }
+  
+  /* Приховуємо звичайне меню на мобільних */
+  .header__menu {
+    display: none;
+  }
+  
+  /* Бургер-меню для мобільних */
+  .header__menu-mobile {
+    display: block;
+  }
+  
+  /* Контейнер для мобільних */
+  .container {
+    padding: 0 10px;
+  }
+  
+  /* Основний контент */
+  main {
+    margin: 80px auto 40px auto;
+    padding: 15px 10px;
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Стилі для розкладу на мобільних */
+  .schedule-container {
+    padding: 10px 5px;
+  }
+  
+  /* Змінюємо відображення розкладу для мобільних */
+  .schedule-header {
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+    padding-bottom: 10px;
+  }
+  
+  .empty-header {
+    display: none;
+  }
+  
+  /* Змінюємо вигляд рядків з фільмами для мобільних */
+  .movie-row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .movie-info {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .movie-poster {
+    max-width: 120px;
+  }
+  
+  /* Контейнер для часу сеансів */
+  .mobile-showtimes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Стилі для посилань на сеанси */
+  .showtime-link {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  /* Навігація розкладу */
+  .schedule-navigation {
+    margin-bottom: 15px;
+  }
+  
+  .week-indicator {
+    font-size: 16px;
+  }
+  
+  /* Футер */
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+  
+  .footer__left, .footer__right {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer__links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Мобільне меню */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgba(30, 30, 30, 0.95);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 50px 20px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .mobile-menu.active {
+    left: 0;
+  }
+  
+  .mobile-menu__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .mobile-menu__list {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .mobile-menu__item {
+    margin: 15px 0;
+  }
+  
+  .mobile-menu__link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+  
+  .mobile-menu-overlay.active {
+    display: block;
+  }
+}
+
+/* Стилі для малих пристроїв (Small: ≥576px і <768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Налаштування шрифтів */
+  * {
+    font-size: 16px;
+  }
+  
+  /* Header для планшетів */
+  header {
+    padding: 12px;
+  }
+  
+  .header__logo h4 {
+    font-size: 20px;
+  }
+  
+  /* Приховуємо звичайне меню на планшетах */
+  .header__menu {
+    display: none;
+  }
+  
+  /* Основний контент */
+  main {
+    margin: 90px auto 50px auto;
+    padding: 15px;
+  }
+  
+  /* Змінюємо сітку для розкладу */
+  .schedule-header {
+    grid-template-columns: repeat(7, 1fr);
+    overflow-x: auto;
+  }
+  
+  .empty-header {
+    display: none;
+  }
+  
+  /* Змінюємо вигляд рядків з фільмами */
+  .movie-row {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    min-width: max-content;
+  }
+  
+  .movie-poster {
+    max-width: 100px;
+  }
+  
+  .showtime-cell {
+    min-width: 80px;
+    padding: 10px 5px;
+  }
+  
+  .showtime-link {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  
+  /* Футер */
+  footer {
+    padding: 15px;
+  }
+}
+
+/* Виправлення для запобігання горизонтального прокручування */
+body {
+  overflow-x: hidden;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Активний стан для дати */
+.date-header.active {
+  border-bottom: 2px solid #8b0000;
+  color: #ffeb99;
+}
+
+/* Стилі для активних елементів - збільшуємо відстань для зручності тапів */
+.showtime-link {
+  margin: 3px;
+  min-height: 32px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Робимо телефонні номери активними елементами */
+.phone-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Стилі для мобільного перегляду розкладу - карточна система */
+@media (max-width: 576px) {
+  .schedule-table {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-card {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .movie-card-poster {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .movie-card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .movie-card-times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .day-label {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffeb99;
+    text-align: left;
+  }
+}
