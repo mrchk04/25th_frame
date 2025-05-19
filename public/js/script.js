@@ -1,5 +1,18 @@
 // Функція для реалізації таймера бронювання
 function initializeBookingTimer() {
+    document.addEventListener('DOMContentLoaded', function () {
+        const profileIcon = document.getElementById('profileIcon');
+
+        profileIcon.addEventListener('click', function () {
+            const token = localStorage.getItem('authToken');
+
+            if (token) {
+                window.location.href = 'profile.html';
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+    });
     // Елемент, який містить час
     const durationElement = document.querySelector('.duration-text');
     

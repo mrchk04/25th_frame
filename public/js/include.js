@@ -13,4 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
+
+    document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('profile')) {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+        window.location.href = 'profile.html';
+        } else {
+        window.location.href = 'login.html';
+        }
+    }
+    });
+
+
 });

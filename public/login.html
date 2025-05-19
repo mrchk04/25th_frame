@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація | Кінотеатр</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <div class="tab active" data-tab="login">Вхід</div>
+                    <div class="tab" data-tab="register">Реєстрація</div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="auth-form active" id="login-form">
+                    <h2>Вхід в особистий кабінет</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Пароль</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        <div class="form-group remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Запам'ятати мене</label>
+                        </div>
+                        <div class="form-group forgot-password">
+                            <a href="#" class="forgot-link">Забули пароль?</a>
+                        </div>
+                        <button type="submit" class="auth-button">Увійти</button>
+                    </form>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="auth-form" id="register-form">
+                    <h2>Реєстрація нового користувача</h2>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="registerName">Ім'я</label>
+                            <input type="text" id="registerName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Email</label>
+                            <input type="email" id="registerEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPhone">Телефон</label>
+                            <input type="tel" id="registerPhone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Пароль</label>
+                            <input type="password" id="registerPassword" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerConfirmPassword">Підтвердження паролю</label>
+                            <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+                        </div>
+                        <div class="form-group terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Я погоджуюсь з <a href="#" class="terms-link">умовами користування</a></label>
+                        </div>
+                        <button type="submit" class="auth-button">Зареєструватися</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="./js/auth.js"></script>
+    <script src="./js/include.js"></script>
+    <script src="./js/mobile-script.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>

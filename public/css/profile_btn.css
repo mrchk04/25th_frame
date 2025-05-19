@@ -1,0 +1,37 @@
+/* Профільна іконка коли користувач авторизований */
+li .profile {
+  cursor: pointer;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 255, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 5px rgba(107, 255, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(107, 255, 107, 0);
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 576px) {
+  .profile-popup {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+  }
+}

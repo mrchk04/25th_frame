@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профіль користувача | Кінотеатр</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="profile-container">
+            <div class="profile-header">
+                <h1>Особистий кабінет</h1>
+                <div id="user-name"></div>
+            </div>
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="assets/images/default-avatar.png" alt="Avatar" id="user-avatar">
+                        <button class="change-avatar-btn">Змінити аватар</button>
+                    </div>
+                    <div class="profile-menu">
+                        <ul>
+                            <li class="active" data-tab="personal-info">Особисті дані</li>
+                            <li data-tab="tickets">Мої квитки</li>
+                            <li data-tab="favorite">Улюблені фільми</li>
+                            <li data-tab="history">Історія переглядів</li>
+                            <li data-tab="settings">Налаштування</li>
+                        </ul>
+                    </div>
+                    <button id="logout-btn" class="logout-btn">Вийти з аккаунту</button>
+                </div>
+                <div class="profile-tabs">
+                    <!-- Особисті дані -->
+                    <div class="profile-tab active" id="personal-info">
+                        <h2>Особисті дані</h2>
+                        <form id="personal-info-form">
+                            <div class="form-group">
+                                <label for="name">Ім'я</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Дата народження</label>
+                                <input type="date" id="birthday" name="birthday">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="save-btn">Зберегти зміни</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Мої квитки -->
+                    <div class="profile-tab" id="tickets">
+                        <h2>Мої квитки</h2>
+                        <div class="tickets-list" id="tickets-container">
+                            <p class="no-data-message">У вас поки немає квитків</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Улюблені фільми -->
+                    <div class="profile-tab" id="favorite">
+                        <h2>Улюблені фільми</h2>
+                        <div class="favorite-movies" id="favorite-container">
+                            <p class="no-data-message">У вас поки немає улюблених фільмів</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Історія переглядів -->
+                    <div class="profile-tab" id="history">
+                        <h2>Історія переглядів</h2>
+                        <div class="history-list" id="history-container">
+                            <p class="no-data-message">Історія перегляду порожня</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Налаштування -->
+                    <div class="profile-tab" id="settings">
+                        <h2>Налаштування</h2>
+                        <form id="settings-form">
+                            <div class="form-group">
+                                <h3>Зміна паролю</h3>
+                                <label for="current-password">Поточний пароль</label>
+                                <input type="password" id="current-password" name="currentPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Новий пароль</label>
+                                <input type="password" id="new-password" name="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Підтвердження паролю</label>
+                                <input type="password" id="confirm-password" name="confirmPassword">
+                            </div>
+                            <div class="form-group">
+                                <h3>Налаштування сповіщень</h3>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="email-notifications" name="emailNotifications" checked>
+                                    <label for="email-notifications">Отримувати сповіщення по email</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="sms-notifications" name="smsNotifications">
+                                    <label for="sms-notifications">Отримувати SMS сповіщення</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="save-btn">Зберегти налаштування</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="./js/include.js" defer></script>
+    <script src="./js/mobile-script.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+</html>
