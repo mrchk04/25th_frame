@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icons/logo_small.png"/>
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Адмін-панель | 25th frame</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header__nav">
+            <div class="header__logo">
+                <img src="./assets/icons/logo_small.png" alt="25th frame">
+                <h4>25th frame Admin</h4>
+            </div>
+            <!-- <div class="header__menu-right">
+                <ul>
+                    <li>
+                        <span id="adminUserName" style="margin-right: 15px; color: #fdf0d5;">Адміністратор</span>
+                    </li>
+                    <li>
+                        <button onclick="adminPanel?.logout()" class="logout" title="Вийти">
+                            <img src="./assets/icons/logout.png" alt="Logout" class="logout">
+                        </button>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <img src="./assets/icons/logo_small.png" alt="Logo">
+                    <span>Адмін-панель</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><img src="./assets/icons/Clipboard.png" alt="Dashboard">Панель керування</a></li>
+                <li><a href="#"><img src="./assets/icons/Clapper_Board.png" alt="Films">Фільми</a></li>
+                <li><a href="#"><img src="./assets/icons/Calendar_e.png" alt="Schedule">Розклад сеансів</a></li>
+                <li><a href="#"><img src="./assets/icons/Admission Tickets.png" alt="Tickets">Квитки</a></li>
+                <li><a href="#"><img src="./assets/icons/Bust In Silhouette.png" alt="Users">Користувачі</a></li>
+                <li><a href="#"><img src="./assets/icons/Bar Chart.png" alt="Statistics">Статистика</a></li>
+                <li><a href="#"><img src="./assets/icons/Gear.png" alt="Settings">Налаштування</a></li>
+            </ul>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="./assets/icons/Bust In Silhouette.png" alt="User">
+                    </div>
+                    <div class="user-details">
+                        <div class="user-name" id="sidebarUserName">Завантаження...</div>
+                        <div class="user-role">Адміністратор</div>
+                    </div>
+                </div>
+                <button class="btn btn-logout" onclick="adminPanel?.logout()">
+                    <!-- <img src="./assets/icons/logout.png" alt="Logout"> -->
+                    Вийти
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Початковий вміст дашборду -->
+            <div class="panel-header">
+                <h1 class="panel-title">Панель керування</h1>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary">Імпортувати дані</button>
+                    <button class="btn btn-primary">Додати новий фільм</button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="admin-cards">
+                <div class="stats-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/Film Frames.png" alt="Movies">
+                    </div>
+                    <div class="card-info">
+                        <h3>-</h3>
+                        <p>Активних фільмів</p>
+                        <div class="stat-change positive">+5% цього місяця</div>
+                    </div>
+                    <div class="card-trend">📈</div>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/Admission Tickets.png" alt="Tickets">
+                    </div>
+                    <div class="card-info">
+                        <h3>-</h3>
+                        <p>Проданих квитків</p>
+                        <div class="stat-change positive">+12% цього місяця</div>
+                    </div>
+                    <div class="card-trend">🎫</div>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/Bust In Silhouette.png" alt="Users">
+                    </div>
+                    <div class="card-info">
+                        <h3>-</h3>
+                        <p>Зареєстрованих користувачів</p>
+                        <div class="stat-change positive">+8% цього місяця</div>
+                    </div>
+                    <div class="card-trend">👥</div>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/Bar Chart.png" alt="Revenue">
+                    </div>
+                    <div class="card-info">
+                        <h3>-</h3>
+                        <p>Дохід цього місяця</p>
+                        <div class="stat-change positive">+18% цього місяця</div>
+                    </div>
+                    <div class="card-trend">💰</div>
+                </div>
+            </div>
+
+            <!-- Recent Movies Section -->
+            <div class="section-header">
+                <h2 class="panel-title">Останні додані фільми</h2>
+                <div class="section-controls">
+                    <button class="btn btn-secondary" onclick="adminPanel?.loadFilmsSection()">Переглянути всі</button>
+                </div>
+            </div>
+
+            <!-- Movies Table -->
+            <table class="movies-table">
+                <thead>
+                    <tr>
+                        <th class="sortable">Назва фільму <span class="sort-icon">↕</span></th>
+                        <th class="sortable">Режисер <span class="sort-icon">↕</span></th>
+                        <th class="sortable">Дата прем'єри <span class="sort-icon">↕</span></th>
+                        <th>Статус</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-center">Завантаження даних...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Bulk Actions (initially hidden) -->
+            <div class="bulk-actions" style="display: none;">
+                <div>
+                    <span id="selectedCount">0</span> фільмів обрано
+                </div>
+                <div class="bulk-buttons">
+                    <button class="btn btn-secondary">Змінити статус</button>
+                    <button class="btn btn-danger">Видалити обрані</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/admin.js"></script>
+</body>
+</html>
